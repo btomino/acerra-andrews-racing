@@ -1,29 +1,28 @@
 {
-  "name": "skeleton-scss",
-  "version": "2.0.4",
-  "description": "The (un)official Sass Version of Skeleton (2.0.4): A Dead Simple, Responsive Boilerplate for Mobile-Friendly Development",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WhatsNewSaes/Skeleton-Sass"
-  },
-  "bugs": {
-    "url": "https://github.com/WhatsNewSaes/Skeleton-Sass/issues"
-  },
-  "homepage": "https://github.com/whatsnewsaes/Skeleton-Sass",
-  "author": "Seth Coelen <scoelen89@gmail.com>  (http://sethcoelen.com/)",
-  "keywords": [
-    "skeleton",
-    "sass",
-    "scss",
-    "responsive",
-    "boilerplate"
-  ],
-  "license": "MIT",
+  "name": "Front-End-Boilerplate",
+  "description": "Start a project with this front-end build kit",
+  "license": "",
+  "repository": "",
+  "private": true,
+  "author": "Joe Fritz <joe@xmog.com>",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-sass": "~0.8.1",
-    "node-sass": "~3.4.2",
-    "grunt-sass": "~1.1.0"
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-fontcustom": "^0.1.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.0",
+    "jshint": "^2.9.1",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "del": "^2.2.0"
   }
 }

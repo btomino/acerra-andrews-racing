@@ -1,84 +1,74 @@
-# [Skeleton-Sass](http://getskeleton.com)
+# Penn CPR Website
 
-Skeleton-Sass is the (un)official Sass version of [Dave Gamache's](https://twitter.com/dhg) Skeleton Framework. It currently featues a stable version of Skeleton 2.0.4
+This site is built using the Concise CSS Framework (http://concisecss.com).
 
------
+## First Setup
 
-Skeleton is a simple, responsive boilerplate to kickstart any responsive project.
+In the web folder, run:
 
-Check out <http://getskeleton.com> for documentation and details.
+    npm install
 
-## Getting started
+This will install all of the necessary modules to run the gulp processes.
 
-### Install Global Dependancies
-  * [Node.js](http://nodejs.org)
-  * [bower](http://bower.io): `[sudo] npm install bower -g`
-  * [grunt.js](http://gruntjs.com): `[sudo] npm install -g grunt-cli`
+Then run:
 
-### Install Local Dependancies
-  * [Download zip](https://github.com/whatsnewsaes/Skeleton-Sass/archive/master.zip), [clone the repo](github-mac://openRepo/https://github.com/whatsnewsaes/Skeleton-Sass) or `bower install skeleton-scss` from your terminal
-  * cd to project folder
-  * run `[sudo] npm install` (first time users)
-  * run `grunt` (to watch and compile sass files)
+    gulp
 
-### What's in the download?
+This will do the initial build: create a css file out of compiled LESS files, and copy images/fonts/js from src to dist.
 
-The download includes Skeleton's CSS, ~~Normalize CSS as a reset,~~ a sample favicon, and an index.html as a starting point.
+## Writing CSS with Concise
 
-```
-skeleton/
-├── index.html
-├── scss/
-│   └── skeleton.scss
-├── images/
-│   └── favicon.png
-├── package.json
-├── Gruntfile.js
-└── README.md
+Concise has a pretty decent starting point for most page elements, you can find those at the bottom of the documentation page: http://concisecss.com/documentation/
 
-```
+Any customizations that need to be done to the framework to make it match the mockups is to be done in 
 
-### Contributions
-The goal of Skeleton-Sass is to have a mirrored Sass repository of Skeleton. In order to keep the integrity of the original Skeleton framework, I cannot accept any features or functionality outside the original implementation of [Dave Gamache's](https://twitter.com/dhg) [Skeleton Framework](https://github.com/dhg/Skeleton). If you would like to see features, functionality, or extensions outside of the original please make a PR / or issue on the original skeleton framework.
+	src/style/custom/_custom.scss
 
-If you have sass improvements, additional mixins, or other helpful sass techniques that stay within the original codebase. Feel free to make a pull request!
+You can change variables, colors, etc in 
 
-### Why it's awesome
+	src/style/custom/_globals.scss
 
-Skeleton is lightweight and simple. It styles only raw HTML elements (with a few exceptions) and provides a responsive grid. Nothing more.
-- Minified, it's less than a kb
-- It's a starting point, not a UI framework
-- ~~No compiling or installing...just vanilla CSS~~
+Just read through the documentation to see how things like grids work, and if you have any questions, please don't hesitate to ask.	
 
+## JSHint
 
-## Browser support
+This boilerplate uses "gulp-jshint," a tool that helps to detect errors and potential problems in your JavaScript code.  Read more here: https://www.npmjs.com/package/gulp-jshint
 
-- Chrome latest
-- Firefox latest
-- Opera latest
-- Safari latest
-- IE latest
+By default, JSHint isn't doing anything.  It checks all JS files in src/js/.  If you'd like to run it, just run:
 
-The above list is non-exhaustive. Skeleton works perfectly with almost all older versions of the browsers above, though IE certainly has large degradation prior to IE9.
+	gulp lint
 
+This will show a report in Terminal.
 
-## License
+## Icon Font Generator
 
-All parts of Skeleton-sass are free to use and abuse under the [open-source MIT license](http://opensource.org/licenses/mit-license.php).
+This boilerplate uses "gulp-fontcustom" to generate a usable font out of icons placed in the src/icons/ folder. Read more here: https://www.npmjs.com/package/gulp-fontcustom
 
+### Generating Icons
 
-## Colophon
+To get this tool set up correctly, you must first install two libraries.  In terminal, from anywhere, run these two commands:
 
-Skeleton was built using [Sublime Text 3](http://www.sublimetext.com/3) and designed with [Sketch](http://bohemiancoding.com/sketch). The typeface [Raleway](http://www.google.com/fonts/specimen/Raleway) was created by [Matt McInerney](http://matt.cc/) and [Pablo Impallari](http://www.impallari.com/). Code highlighting by Google's [Prettify library](https://code.google.com/p/google-code-prettify/). Icons in the header of the documentation are all derivative work of icons from [The Noun Project](thenounproject.com). [Feather](http://thenounproject.com/term/feather/22073) by Zach VanDeHey, [Pen](http://thenounproject.com/term/pen/21163) (with cap) by Ed Harrison, [Pen](http://thenounproject.com/term/pen/32847) (with clicker) by Matthew Hall, and [Watch](http://thenounproject.com/term/watch/48015) by Julien Deveaux.
+    brew install fontforge eot-utils
+    gem install fontcustom
 
+This will install the necessary things to get the icon font generation working.
 
-## Acknowledgement
+This generator exists outside of the rest of the gulp tools, so you can to run it only when necessary.  To generate the font once, run:
 
-Skeleton was created by [Dave Gamache](https://twitter.com/dhg) for a better web.
+	gulp icons
 
-Skeleton-Sass was created by [Seth Coelen](http://sethcoelen.com) for a better Skeleton.
+To watch the src/icons/ folder for new icons and automatically update the font (while you're actively working on it), run:
 
-<a href='https://ko-fi.com?i=2446A87JJ08CZ' target='_blank'>
-<img style='border:0px;width:100px;' src='https://az743702.vo.msecnd.net/cdn/btn1.png' border='0' alt='Buy me a coffee at ko-fi.com' />
-</a> 
+	gulp watch-icons
 
+### Building the Styleguide
+
+I've left the styleguide out of the main build process for now, because we may not always want to use it.  To build the styleguide:
+
+	gulp styleguide
+
+This builds and runs the styleguide on localhost:3000
+
+You can also have gulp watch for changes in LESS/CSS files and regenerate automatically by running this:
+
+	gulp watch-styleguide

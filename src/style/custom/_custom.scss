@@ -1,0 +1,107 @@
+//
+// Acerra Andrew's Racing 
+// =============================================================================
+
+body, html {
+	background: getColor(background, darker);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family:  $font-family;
+}
+
+h1 {
+	color: white;
+	font-size: 40px;
+	text-transform: uppercase;
+	
+}
+
+h5 {
+	color: getColor(text, secondary);
+}
+
+
+
+.nav-box {
+	color: getColor(text, secondary);
+	position: absolute;
+	right: 50px;
+	top: 20px;
+	letter-spacing: 4px;
+	display: inline-block;
+} 
+
+.vert-text {
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    font-family: $font-family;
+    font-size: 1.1rem;
+    letter-spacing: .025rem;
+    text-align: left;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    min-width: 300px;
+	position: fixed;
+    left: 10px;
+	color: getColor(gray, light);
+}
+
+
+#hero {
+//	background: getColor(background, dark);
+	height: 800px;
+	margin: $global-margin;
+	position: relative;
+	
+	.more {
+		position: absolute;
+		bottom: 0;
+	}
+	
+}
+
+#about {
+	height: 600px;
+	margin: 0 50px;
+	
+	.story {
+		padding: 200px;
+		
+		> p {
+			color: white;
+			line-height: 40px;
+		}
+	}
+	
+	.photo-box {
+		background: white;
+		height: 300px;
+	}
+	
+	.photo-box__higher {
+		background: #eee;
+		height: 400px;
+		margin-top: -100px;
+	}
+	
+}
+
+#team {
+	height: 600px;
+	margin: $global-margin;
+}
+
+
+
+//.vert-footer {
+//	color: getColor(gray, light);
+//	letter-spacing: 1px;
+//}		
+//		
+
+	
+
