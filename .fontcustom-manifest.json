@@ -1,0 +1,54 @@
+{
+  "checksum": {
+    "previous": "d4db43230d659354839451cae39cf357fac54dc042b532b3ab7f89e683d6dc7f",
+    "current": "d4db43230d659354839451cae39cf357fac54dc042b532b3ab7f89e683d6dc7f"
+  },
+  "fonts": [
+    "./___tmp___/icons.ttf",
+    "./___tmp___/icons.svg",
+    "./___tmp___/icons.woff",
+    "./___tmp___/icons.eot"
+  ],
+  "glyphs": {
+    "facebook-icon": {
+      "codepoint": 61696,
+      "source": "/Users/rebeccatomino/Desktop/workspace/side-projects/acerra-andrews-racing/src/icons/facebook-icon.svg"
+    },
+    "twitter-icon": {
+      "codepoint": 61697,
+      "source": "/Users/rebeccatomino/Desktop/workspace/side-projects/acerra-andrews-racing/src/icons/twitter-icon.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "force": true,
+    "input": {
+      "templates": "/Users/rebeccatomino/Desktop/workspace/side-projects/acerra-andrews-racing/src/icons",
+      "vectors": "/Users/rebeccatomino/Desktop/workspace/side-projects/acerra-andrews-racing/src/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "./___tmp___",
+      "fonts": "./___tmp___",
+      "preview": "./___tmp___"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "./___tmp___/icons.css",
+    "./___tmp___/icons-preview.html"
+  ]
+}
