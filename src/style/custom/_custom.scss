@@ -10,12 +10,20 @@ body, html {
 	font-family:  $font-family;
 }
 
+// =============================================================================
+// Typography
+// =============================================================================
+
 h1 {
 	color: white;
 	font-size: 40px;
 	text-transform: uppercase;
 	font-style: italic;
-	
+}
+
+h4 {
+	color: getColor(blue, dark);
+	letter-spacing: 3px;
 }
 
 h5 {
@@ -23,10 +31,18 @@ h5 {
 	float: left;
 	margin-right: 25px;
 	font-weight: 400;
-	letter-spacing: 2px;
-	
+	letter-spacing: 2px;	
 }
 
+p {
+	color: white;
+	font-weight: 300;
+}
+
+
+// =============================================================================
+// Layout
+// =============================================================================
 
 
 .nav-box {
@@ -52,7 +68,6 @@ h5 {
     font-smoothing: antialiased;
     min-width: 300px;
 	position: fixed;
-    left: 10px;
 	top: 50%;
 	color: getColor(gray, light);
 }
@@ -75,13 +90,39 @@ h5 {
     right: 10px;
 	top: 50%;
 	color: getColor(gray, light);
-	margin-right: -70px;
+	margin-right: -92px;
     margin-top: -400px;
 	
 }
 
 
+.vert-note__team {
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    font-family: $font-family;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+//	position: absolute;
+	float: right;
+    right: 10px;
+	top: 50%;
+	color: getColor(gray, light);
+	margin-right: -88px;
+    margin-top: 0px;
+	
+}
+
+
+
+
 #hero {
+	background: getColor(background, dark);
 	height: 700px;
 	margin: $global-margin;
 	position: relative;
@@ -90,6 +131,7 @@ h5 {
 		position: absolute;
 		bottom: 5%;
 		right: 20%;
+		z-index: 15;
 		
 		hr {
 			width: 300px;
@@ -101,10 +143,10 @@ h5 {
 	}
 	
 	.intro {
-		width: 500px;
+		width: 600px;
 		position: absolute;
 		bottom: 40%;
-		left: 10%;
+		left: 5%;
 	}
 	
 }
@@ -112,9 +154,24 @@ h5 {
 #about {
 	height: 600px;
 	margin: 0 50px;
+	position: relative;
+	
+	
+	.story--title {
+		color: getColor(blue, dark);
+		font-family: $font-family-print;
+		position: absolute;
+		font-size: 6em;
+		letter-spacing: 10px;
+		left: 3%;
+		top: 5%;
+		z-index: 0;
+	}
 	
 	.story {
-		padding: 100px;
+		padding: 100px 100px 0 100px;
+		z-index: 10;
+		position: relative;
 		
 		> p {
 			color: white;
@@ -136,18 +193,126 @@ h5 {
 }
 
 #team {
-	height: 600px;
-	margin: $global-margin;
+	height: 1000px;
+	margin: 0px 50px 50px 50px;
+	position: relative;
+	
+	.header-name {
+		width: 100%;
+		height: 400px;
+		background-color: getColor(base, primary);
+		position: relative;
+		
+		&:after {
+			background: url("http://i65.tinypic.com/2ngcvq0.png") center no-repeat;
+			background-size: cover;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			z-index: 0;
+		}
+		
+		.first-name {
+			font-size: 230px;
+			font-weight: bolder;
+			color: getColor(red, dark);
+			width: 80%;
+			margin: 0 auto;
+			letter-spacing: 15px;
+			z-index: 3;
+			font-family:  $font-family-print;
+
+		}
+		
+		.last-name {
+			font-size: 100px;
+			font-weight: bold;
+			color: white;
+			position: absolute;
+			top: 40%;
+			right: 18%;
+			z-index: 4;
+			font-family:  $font-family-print;
+		}
+	}
+	
+	
+	.stats {
+		position: absolute;
+		left: 20%;
+		width: 90px;
+		border-right: 1px solid getColor(base, selection);
+		
+		ul {
+			margin-top: 30px;
+		}
+	}
+	
+	.person {
+		width: 351px;
+		left: 35%;
+		position: absolute;
+		top: 10%;
+		z-index: 10;
+	}
+	
+	.teammates {	
+		position: absolute;
+		right: 4%;
+		top: 10%;
+		
+		.player {
+			width: 70px;
+			height: 70px;
+			border: 5px solid white;
+			margin: 100px 0;
+			border-radius: 50%;
+			background-color: aliceblue;
+		
+			&.active {
+				box-shadow: 0 30px 80px 0 rgba(0,0,0,.2);
+			}
+		}
+	
+	}
+	
+	.facts {
+		width: 400px;
+		position: absolute;
+		right: 15%;
+		top: 35%;
+		
+		p.info {
+			
+			margin-top: 50px;
+			color: white;
+			line-height: 50px;
+			
+		}
+		
+	}
+	
 	
 }
 
 
+#car{
+	height: 600px;
+	margin: 0px 50px 50px 50px;
+	position: relative;	
+}
 
-//.vert-footer {
-//	color: getColor(gray, light);
-//	letter-spacing: 1px;
-//}		
-//		
+// =============================================================================
+// Secondary layout
+// =============================================================================
+
+// =============================================================================
+// Misc
+// =============================================================================
+
 
 .icon-facebook-icon, .icon-twitter-icon {
 	color: getColor(base, selection);
