@@ -3,6 +3,8 @@
 // =============================================================================
 $global-padding: 5px;
 $global-margin: 50px 50px 0px 50px;
+$margin-major: 50px;
+
 
 $height-icon: 50px;
 $width-line: 100px;
@@ -70,7 +72,7 @@ $translateX: 0;
  $font-family-headings: "Lato", "Arial", sans-serif;
  $font-family-print:    "Montserrat", "Times New Roman", "Times", serif;
  $font-family-mono:     "Consolas", monospace;
- $font-base-size:       16;
+ $font-base-size:       14;
 
 
 //
@@ -123,9 +125,9 @@ $translateX: 0;
    ),
 
    blue: (
-     "darker":  #495b61,
+     "darker":  #111318,
      "dark":    #323949,
-     "base":    #4591aa,
+     "base":    #292F3D,
      "light":   #5ab0cc,
      "lighter": #74cbe8
    ),

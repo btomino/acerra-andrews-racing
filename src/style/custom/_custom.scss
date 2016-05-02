@@ -3,6 +3,7 @@
 // =============================================================================
 
 body, html {
+
 	background: getColor(background, darker);
 	height: 100%;
 	width: 100%;
@@ -21,6 +22,16 @@ h1 {
 	font-style: italic;
 }
 
+h2 {
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+}
+
+h3 {
+	color: white;
+}
+
 h4 {
 	color: getColor(blue, dark);
 	letter-spacing: 3px;
@@ -37,6 +48,11 @@ h5 {
 p {
 	color: white;
 	font-weight: 300;
+	line-height: 36px;
+}
+
+img {
+	width: 100%;
 }
 
 
@@ -108,7 +124,7 @@ p {
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
-//	position: absolute;
+	position: absolute;
 	float: right;
     right: 10px;
 	top: 50%;
@@ -130,7 +146,7 @@ p {
 	.more {
 		position: absolute;
 		bottom: 5%;
-		right: 20%;
+		right: 10%;
 		z-index: 15;
 		
 		hr {
@@ -143,7 +159,7 @@ p {
 	}
 	
 	.intro {
-		width: 600px;
+		width: 700px;
 		position: absolute;
 		bottom: 40%;
 		left: 5%;
@@ -156,6 +172,10 @@ p {
 	margin: 0 50px;
 	position: relative;
 	
+	.story-contain {
+		margin-top: 100px;
+		
+	}
 	
 	.story--title {
 		color: getColor(blue, dark);
@@ -164,7 +184,7 @@ p {
 		font-size: 6em;
 		letter-spacing: 10px;
 		left: 3%;
-		top: 5%;
+		top: 21%;
 		z-index: 0;
 	}
 	
@@ -180,28 +200,36 @@ p {
 	}
 	
 	.photo-box {
-		background: white;
+
 		height: 300px;
+		padding: 0;
 	}
 	
 	.photo-box__higher {
-		background: #eee;
+
 		height: 400px;
 		margin-top: -100px;
+		padding: 0;
 	}
 	
 }
 
 #team {
 	height: 1000px;
-	margin: 0px 50px 50px 50px;
+	margin: $margin-major;
 	position: relative;
 	
+//	.header-name {
+//		width: 100%;
+//		height: 400px;
+//		background-color: getColor(base, primary);
+//		position: relative;
+		
 	.header-name {
 		width: 100%;
 		height: 400px;
-		background-color: getColor(base, primary);
 		position: relative;
+		
 		
 		&:after {
 			background: url("http://i65.tinypic.com/2ngcvq0.png") center no-repeat;
@@ -218,7 +246,7 @@ p {
 		.first-name {
 			font-size: 230px;
 			font-weight: bolder;
-			color: getColor(red, dark);
+			color: getColor(base, primary);
 			width: 80%;
 			margin: 0 auto;
 			letter-spacing: 15px;
@@ -242,8 +270,18 @@ p {
 	
 	.stats {
 		position: absolute;
-		left: 17%;
-		border-right: 1px solid getColor(base, selection);
+		left: 10%;
+		box-shadow: 0 50px 80px 0 rgba(0,0,0,.2);
+//		background: #424b61; /* Old browsers */
+//		background: -moz-linear-gradient(-45deg,  #424b61 0%, #191c24 100%); /* FF3.6-15 */
+//		background: -webkit-linear-gradient(-45deg,  #424b61 0%,#191c24 100%); /* Chrome10-25,Safari5.1-6 */
+//		background: linear-gradient(135deg,  #424b61 0%,#191c24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424b61', endColorstr='#191c24',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+		
+		
+//		background: getColor(blue, base);
+//		border-right: 1px solid getColor(base, selection);
 		padding-right: 20px;
 		
 		ul {
@@ -273,7 +311,7 @@ p {
 	
 	.person {
 		width: 351px;
-		left: 35%;
+		left: 25%;
 		position: absolute;
 		top: 10%;
 		z-index: 10;
@@ -318,12 +356,198 @@ p {
 	
 }
 
+#sponsor {
+	height: 300px;
+	margin: $margin-major;
+	position: relative;
+	
+	.sponsor-title {
+		color: getColor(base, selection);
+		font-size: 3em;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+}
+
+
 
 #car{
-	height: 600px;
+	height: 1000px;
 	margin: 0px 50px 50px 50px;
 	position: relative;	
+	
+	.car-img {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		max-width: 800px;
+	}
+	
+	.car-number{
+		
+		width: 200px;
+		position: absolute;
+		left: 10%;
+		top: -20%;
+		
+		
+		.top-text {
+			color: white;
+			font-size: 2em;
+			font-style: italic;
+			position: absolute;
+			top: 47%;
+			text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.58);
+		}
+	
+		.number {
+			font-size: 330px;
+			font-style: italic;
+			color: getColor(base, primary);
+			font-weight: 900;
+			font-family: $font-family-print;
+
+		}
+		
+	}
+	
+	.car {
+		width: 500px;
+		height: 700px;
+		border: 15px solid getColor(blue, base);
+		margin-left: 15%;
+		
+	}
+	
+	
+	.large-title {
+		color: getColor(base, selection);
+		font-size: 80px;
+		font-family: $font-family-print;
+		position: absolute;
+		left: 30%;
+		top: 10%;
+		text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.58);
+		letter-spacing: 15px;
+		line-height: 80px;
+	}
+	
+	.text-overview {
+		width: 400px;
+		position: absolute;
+		right: 10%;
+		top: 30%;
+	}
+	
 }
+
+
+#schedule {
+
+	margin: 0px 50px 50px 50px;
+	position: relative;	
+	
+	
+	.year-title {
+		font-size: 200px;
+		font-style: italic;
+		color: getColor(base, primary);
+		font-weight: 900;
+		font-family: $font-family-print;
+		position: absolute;
+		right: 5%;
+		top: -6%;
+	}
+	
+
+	
+//		.story--title {
+//		color: getColor(blue, dark);
+//		font-family: $font-family-print;
+//
+//		font-size: 6em;
+//		letter-spacing: 10px;
+//		z-index: 0;
+//	}
+	
+}
+
+
+.table--responsive {
+	position: relative;
+}
+	
+table {
+	width: 70%;
+	border: 0;
+	margin: 0 auto;
+	
+	& thead {
+		background: none;
+	}
+	
+	& td, & th {
+		border-right: getColor(background, darker);
+		
+	}
+	
+	th {
+		color: white;
+		font-size: 2em;
+		padding: 0 10px 0 0;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		
+		&:nth-child(2) {
+			text-align: center;
+		}
+	}
+	
+	td {
+		padding: 8px 1em;
+		color: whitesmoke;
+		min-width: 360px; 
+		font-size: 1.25em;
+		
+		&:nth-child(2) {
+    text-align: center;
+			
+			
+		
+	}
+}
+
+}
+.table--fillOdd tbody tr:nth-child(odd) {
+	background: getColor(blue, base);
+}
+
+.table--fillOdd tbody tr:nth-child(even) {
+	background: getColor(blue, darker);
+}
+
+table.table {
+	
+	caption {
+		text-align: left;
+		color: getColor(base, primary);
+		font-size: 1.125em;
+	}
+
+}
+	
+	table td:last-child, table th:last-child {
+		border-right: none;
+		text-align: right;
+}
+
+footer {
+	height: 300px;
+	margin: $global-margin;
+}
+
+
 
 // =============================================================================
 // Secondary layout
